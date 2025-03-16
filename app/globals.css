@@ -19,8 +19,81 @@
   }
 }
 
+
+
+.bgsec{
+  background-color: #1e549f;
+}
+
+.bgthird{
+  background-color: #2e79ba;
+}
+
+.bgfour{
+  background-color: #5fc9f3;
+}
+
+.bgone{
+  background-color: #081f37;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.appearing-disappearing-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the item */
+  width: 50px;
+  height: 50px;
+  background-color: lightblue;
+  border-radius: 50%; /* Make items circular */
+  opacity: 0; /* Initially hidden */
+  animation: appearDisappear 5s infinite; /* Animation duration and loop */
+}
+
+@keyframes appearDisappear {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5); /* Start small */
+  }
+  10% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); /* Appear */
+  }
+  80% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); /* Stay visible */
+  }
+  90% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5); /* Disappear */
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+}
+
+/* Create a sequence of items with staggered animations */
+.appearing-disappearing-item:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.appearing-disappearing-item:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.appearing-disappearing-item:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+.appearing-disappearing-item:nth-child(5) {
+  animation-delay: 2s;
 }
