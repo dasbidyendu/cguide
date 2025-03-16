@@ -13,7 +13,7 @@ interface ProfileData {
   socialLinks: { [key: string]: string };
 }
 
-const page = () => {
+const Page = () => {
   const { user } = useUser();
   const profile: ProfileData = {
     username: "AnimeFan123",
@@ -85,4 +85,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
