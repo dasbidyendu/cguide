@@ -29,7 +29,16 @@ export default function Home() {
         <h2 className="px-6 text-wrap text-blue-950 min-w-[300px] max-w-[850px] h-fit font-stretch-110% lg:text-xl text-lg">Embark on a journey of career discovery with CareerFlow, your personalized guide to professional fulfillment. We delve deep into your unique profile, analyzing your experiences, passions, and aptitudes to unveil career paths that resonate with your true potential. Our intelligent platform goes beyond simple job matching, providing tailored recommendations accompanied by insights into industry trends and required skills. Connect with seasoned professionals in your desired fields, fostering invaluable mentorship and expanding your network. Access curated learning resources to bridge skill gaps and enhance your expertise. We streamline your job search, offering personalized recommendations, all while tracking your interests and personality . CareerFlow empowers you to make informed decisions, navigate career transitions with confidence, and ultimately achieve lasting success in a career you love.</h2>
 
       </div>
+
+
+
+      <div className="flex flex-col flex-wrap items-center justify-center p-10 mt-10 gap-10">
+        
+
+      </div>
       
+
+
       
 
       <div>
