@@ -59,14 +59,14 @@ const page: React.FC = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-white p-4 rounded-lg">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+        <div className="text-white p-4 rounded-lg border bg-blue-900 border-blue-900">
           <h2 className="text-lg font-semibold mb-2">About Me</h2>
           <p>{profile.bio}</p>
         </div>
 
 
-        <div className="bg-white p-4 rounded-lg">
+        <div className="text-white p-4 rounded-lg border bg-blue-900 border-blue-900">
           <h2 className="text-lg font-semibold mb-2">Favorites</h2>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
             {profile.interest.map((interest, index) => (
@@ -75,7 +75,7 @@ const page: React.FC = () => {
           </ul>
         </div>
 
-        <div className="bg-white p-4 rounded-lg">
+        <div className="text-white p-4 rounded-lg border bg-blue-900 border-blue-900">
           <h2 className="text-lg font-semibold mb-2">Social Links</h2>
           <ul>
             {Object.entries(profile.socialLinks).map(([name, link]) => (
@@ -84,7 +84,7 @@ const page: React.FC = () => {
                   href={link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-500 hover:underline"
+                  className="text-white opacity-60 hover:underline"
                 >
                   {name}
                 </a>
