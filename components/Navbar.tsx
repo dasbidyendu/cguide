@@ -31,12 +31,18 @@ const Navbar: React.FC = () => {
           >
             About
           </button>
-          <a href="#" className="text-gray-300 hover:text-white">
+          <button
+            onClick={() => scrollToSection("services")}
+            className="text-gray-300 hover:text-white"
+          >
             Services
-          </a>
-          <a href="#" className="text-gray-300 hover:text-white">
+          </button>
+          <button
+            onClick={() => scrollToSection("footer")}
+            className="text-gray-300 hover:text-white"
+          >
             Contact
-          </a>
+          </button>
         </div>
 
         <div className="md:hidden">
@@ -83,7 +89,7 @@ const Navbar: React.FC = () => {
             Services
           </button>
           <button
-            onClick={() => scrollToSection("about")}
+            onClick={() => scrollToSection("footer")}
             className="block py-2 px-4 text-gray-300 hover:bg-gray-700"
           >
             Contact

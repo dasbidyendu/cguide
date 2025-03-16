@@ -44,7 +44,7 @@ export default function CareerGuide({ structuredOutput }: CareerGuideProps) {
   if (!structuredOutput) return null;
 
   return (
-    <div className="mt-4 p-4 rounded-lg shadow h-full overflow-y-scroll bg-amber-50 flex-1">
+    <div className="mt-4 p-4 rounded-lg shadow h-full overflow-y-scroll bgone text-amber-50 flex-1">
       <h3 className="text-lg font-bold">Career Guide</h3>
       {loading ? (
         <p>Loading career guide...</p>

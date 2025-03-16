@@ -2,7 +2,7 @@
 
 import React from "react";
 import Navhome from "@/components/Navhome";
-import { UserButton, UserProfile, useUser } from "@clerk/nextjs";
+import { SignOutButton, UserButton, UserProfile, useUser } from "@clerk/nextjs";
 interface ProfileData {
   username: string;
   avatarUrl: string;
@@ -46,12 +46,9 @@ const page: React.FC = () => {
             <h1 className="text-2xl font-semibold mb-2">
               Profile: {user?.firstName}
             </h1>
-            <button
-              className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded"
-              onClick={handleLogout}
-            >
-              Logout
-            </button>
+            <div className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded">
+              <SignOutButton />
+            </div>
           </div>
         </div>
 
