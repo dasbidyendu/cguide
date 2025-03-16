@@ -22,9 +22,9 @@ const Navbar: React.FC<NavbarProps> = () => {
 
         <div className="hidden md:flex justify-between items-center px-60 flex-1 ">
            <div> <a href="#" className="text-gray-300 hover:text-white ">Home</a></div>
-           <div> <a href="#" className="text-gray-300 hover:text-white">About</a></div>
-           <div><a href="#" className="text-gray-300 hover:text-white">Services</a></div> 
-           <div><a href="#" className="text-gray-300 hover:text-white">Contact</a></div> 
+           <div> <a href="#" className="text-gray-300 hover:text-white">carreer guide</a></div>
+           <div><a href="#" className="text-gray-300 hover:text-white">connect</a></div> 
+           <div><a href="#" className="text-gray-300 hover:text-white">profile</a></div> 
         </div>
 
         <div className="md:hidden">
@@ -50,9 +50,9 @@ const Navbar: React.FC<NavbarProps> = () => {
       {isOpen && (
         <div className="md:hidden mt-2">
           <a href="#" className="block py-2 px-4 text-gray-300 hover:bg-gray-700">Home</a>
-          <a href="#" className="block py-2 px-4 text-gray-300 hover:bg-gray-700">About</a>
-          <a href="#" className="block py-2 px-4 text-gray-300 hover:bg-gray-700">Services</a>
-          <a href="#" className="block py-2 px-4 text-gray-300 hover:bg-gray-700">Contact</a>
+          <a href="#" className="block py-2 px-4 text-gray-300 hover:bg-gray-700">carrer guide</a>
+          <a href="#" className="block py-2 px-4 text-gray-300 hover:bg-gray-700">connect</a>
+          <a href="#" className="block py-2 px-4 text-gray-300 hover:bg-gray-700">profile</a>
         </div>
       )}
     </nav>

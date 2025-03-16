@@ -97,3 +97,40 @@ body {
 .appearing-disappearing-item:nth-child(5) {
   animation-delay: 2s;
 }
+
+
+
+
+.hidden-scroll-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.hidden-scroll-content {
+  overflow-y: scroll;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px; /* Add some padding for spacing */
+}
+
+.hidden-scroll-content::-webkit-scrollbar {
+  display: none;
+}
+
+.hidden-scroll-content {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollable-item {
+  margin-bottom: 20px; /* Space between items */
+}
+
+.scrollable-image {
+  max-width: 50%; /* Ensure images don't overflow */
+  height: auto;
+  margin-bottom: 10px; /* Space below image */
+}
