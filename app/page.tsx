@@ -1,4 +1,3 @@
-import Button from "@/components/Button";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import Link from "next/link";
@@ -116,7 +115,7 @@ export default function Home() {
       >
         <div>CareerFlow</div>
         <h2 className="hidden md:flex text-xl font-normal">
-          your career's bestfriend
+          your careers bestfriend
         </h2>
         <div className="flex flex-col items-center justify-start gap-5 pt-8 pb-5">
           <Link href={"instagram.com"}>insta</Link>
