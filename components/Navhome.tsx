@@ -2,11 +2,7 @@
 
 import React, { useState } from "react";
 
-interface NavbarProps {
-  // Add any specific props your navbar might need
-}
-
-const Navbar: React.FC<NavbarProps> = () => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {

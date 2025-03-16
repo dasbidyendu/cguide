@@ -10,7 +10,7 @@ export default function CareerPage() {
   const { user } = useUser();
   const [input, setInput] = useState("");
   const [output, setOutput] = useState<any>(null);
-  const [loading, setLoading] = useState(false);
+
   const [int, setInt] = useState(0);
   const saveUserToDB = async (id: string, email: string) => {
     const { error } = await supabase.from("users").upsert([{ id, email }]); // Upsert ensures user is created if not existing
@@ -45,7 +45,6 @@ export default function CareerPage() {
   };
 
   const handleGenerate = async () => {
-    setLoading(true);
     setOutput(null);
 
     try {
@@ -57,10 +56,9 @@ export default function CareerPage() {
 
       const data = await res.json();
       setOutput(data.output);
-    } catch (error) {
+    } catch (error: unknown) {
       console.error("Error generating career path:", error);
     } finally {
-      setLoading(false);
     }
   };
 

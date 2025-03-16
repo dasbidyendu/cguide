@@ -13,7 +13,7 @@ interface ProfileData {
   socialLinks: { [key: string]: string };
 }
 
-const page: React.FC = () => {
+const page = () => {
   const { user } = useUser();
   const profile: ProfileData = {
     username: "AnimeFan123",
@@ -29,11 +29,6 @@ const page: React.FC = () => {
       contact: "3q3242521",
       mail: "sgsg.gmail.com",
     },
-  };
-
-  const handleLogout = () => {
-    console.log("Logout clicked!");
-    // Add your logout logic here (e.g., clear session, redirect)
   };
 
   return (
