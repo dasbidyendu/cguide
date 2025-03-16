@@ -2,7 +2,7 @@
 
 import React from "react";
 import Navhome from "@/components/Navhome";
-import { SignOutButton, UserButton, UserProfile, useUser } from "@clerk/nextjs";
+import { SignOutButton, UserButton, useUser } from "@clerk/nextjs";
 interface ProfileData {
   username: string;
   avatarUrl: string;

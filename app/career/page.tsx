@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Navhome from "@/components/Navhome";
 import Question from "@/components/Question";
-import Image from "next/image";
+
 import { supabase } from "@/lib/supabase";
 import { useUser } from "@clerk/nextjs";
 
