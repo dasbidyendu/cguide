@@ -1,13 +1,14 @@
 import Button from "@/components/Button";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
+import Link from "next/link";
 
 
 
 
 export default function Home() {
   return (
-    <div className="bg-amber-50 w-screen h-screen flex-col py-20 overflow-y-scroll">
+    <div className="bg-amber-50 w-screen h-screen flex-col pt-20 overflow-y-scroll">
       <Navbar/>
       <div>
       <div className="flex flex-row  items-center justify-between w-full h-fit px-20">
@@ -32,19 +33,50 @@ export default function Home() {
 
 
 
-      <div className="flex flex-col flex-wrap items-center justify-center p-10 mt-10 gap-10">
+      <div className="flex flex-col flex-wrap items-center justify-center p-5 mt-10 gap-10">
+        <h1 className="text-amber-50 border bgone rounded-xl px-9  py-3 text-4xl font-extrabold">SERVICES</h1>
+
+
+        <div className="flex flex-row flex-wrap items-center justify-between   ">
+        <div className=" w-full lg:w-[27%] h-fit lg:h-[400px] border order-blue-950 m-4 rounded-xl gap-4 bgone p-5 text-amber-50 hover:scale-105 transition-all">
+          <h1 className="text-bold text-3xl">Personalized Career Path Discovery</h1>
+          <h3> We analyze your hobbies, interests, and past experiences to identify career options that align with your unique strengths and passions. Our intelligent platform delivers tailored recommendations, ensuring you find a fulfilling and successful career.</h3>
+        </div>
+
+        <div className=" w-full lg:w-[27%] h-fit lg:h-[400px] border m-4 order-blue-950 rounded-xl gap-4 bgone p-5 text-amber-50 hover:scale-105 transition-all">
+          <h1 className="text-bold text-3xl">Professional Networking and Connectiony</h1>
+          <h3> We facilitate connections with individuals who are already thriving in your desired career path. Build valuable relationships, gain industry insights, and receive mentorship from experienced professionals.</h3>
+        </div>
+
+
+        <div className=" w-full lg:w-[27%] h-fit lg:h-[400px] border m-4 order-blue-950 rounded-xl gap-4 bgone p-5 text-amber-50 hover:scale-105 transition-all">
+          <h1 className="text-bold text-3xl">Expert Career Guidance</h1>
+          <h3> We offer comprehensive guidance to help you navigate your career journey. From identifying skill gaps to providing personalized learning resources, we equip you with the tools and knowledge necessary to succeed in your chosen field.</h3>
+        </div>
+
+        </div>
         
+       
 
       </div>
-      
 
 
-      
+      <div className="flex flex-row flex-wrap bgone text-amber-50 w-full h-fit min-h-[100px] items-center justify-between px-10 ">
+        <div>
+          logo
+        </div>
+        <h2 className="hidden md:flex text-xl font-normal">your career's bestfriend</h2>
+        <div className="flex flex-col items-center justify-start gap-5 pt-8 pb-5">
+          <Link href={'instagram.com'}>insta</Link>
+          <Link href={'instagram.com'}>linkedin</Link>
+          <Link href={'instagram.com'}>mail</Link>
+          <h2>+91 2348726734</h2>
 
-      <div>
+         
+        </div>
+
 
       </div>
-      
     </div>
   );
 }
