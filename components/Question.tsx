@@ -32,8 +32,8 @@ const Question : React.FC<questionPros> =({option,count=0}) => {
   return (
     <div>
         {option.map((item)=>(
-             <div className='text-blue-950 flex-row flex-wrap gap-2 px-10 font-medium text-lg '>
-                <input type="checkbox" onChange={handleCheckboxChange}  />
+             <div key={item} className='text-blue-950 flex flex-row flex-wrap gap-5 px-10 font-medium text-lg '>
+                <input  type="checkbox" onChange={handleCheckboxChange}  />
                 <h4>{item}</h4>
              </div>
         ))}

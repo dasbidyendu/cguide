@@ -14,7 +14,7 @@ const Navbar: React.FC<NavbarProps> = () => {
   };
 
   return (
-    <nav className="bgone p-4 fixed top-0 w-screen">
+    <nav className="bgone p-4  w-screen">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-white font-bold text-xl">
           Logo
