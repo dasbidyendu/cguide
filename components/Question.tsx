@@ -1,45 +1,47 @@
-'use client'
+"use client";
 
-import React from 'react'
-import { useState } from 'react';
+import React, { useState } from "react";
 
-interface questionPros {
-    option:string[];
-    count?:number;
+interface QuestionProps {
+  option: string[];
+  onSelect: (selected: string[]) => void; // Callback to update parent state
 }
 
+const Question: React.FC<QuestionProps> = ({ option, onSelect }) => {
+  const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
 
-const Question : React.FC<questionPros> =({option,count=0}) => {
+  const handleCheckboxChange = (
+    event: React.ChangeEvent<HTMLInputElement>,
+    item: string
+  ) => {
+    let updatedSelections = [...selectedOptions];
 
-    const [isChecked, setIsChecked] = useState(false);
-  const [countnum, setCountnum] = useState(0);
-
-  const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newChecked = event.target.checked;
-    setIsChecked(newChecked);
-
-    if (newChecked) {
-      setCountnum(prevCountnum => prevCountnum + 1);
-    }else{
-        setCountnum(prevCountnum => prevCountnum + -1);
-
+    if (event.target.checked) {
+      updatedSelections.push(item);
+    } else {
+      updatedSelections = updatedSelections.filter((opt) => opt !== item);
     }
-    // No else block, so count remains the same when unchecked.
+
+    setSelectedOptions(updatedSelections);
+    onSelect(updatedSelections); // Send selected options to the parent component
   };
-
-
 
   return (
     <div>
-        {option.map((item)=>(
-             <div key={item} className='text-blue-950 flex flex-row flex-wrap gap-5 px-10 font-medium text-lg '>
-                <input  type="checkbox" onChange={handleCheckboxChange}  />
-                <h4>{item}</h4>
-             </div>
-        ))}
-
+      {option.map((item) => (
+        <div
+          key={item}
+          className="text-blue-950 flex flex-row flex-wrap gap-5 px-10 font-medium text-lg"
+        >
+          <input
+            type="checkbox"
+            onChange={(e) => handleCheckboxChange(e, item)}
+          />
+          <h4>{item}</h4>
+        </div>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default Question
+export default Question;
