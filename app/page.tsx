@@ -26,12 +26,12 @@ export default function Home() {
             className="w-60 h-12 px-20 rounded-full bgone hover:bg-blue-800 hover:cursor-pointer m-5 "
             title="sign in "
             href={"/login "}
-          />
+          >sign in </Link>
           <Link
             className="w-60 h-12 px-20 rounded-full bgone hover:bg-blue-800 hover:cursor-pointer m-5 "
             title="sign up"
             href={"/register "}
-          />
+          >sign up</Link>
         </div>
       </div>
 
